@@ -1,0 +1,19 @@
+{
+    "name": "jelle-s/arrayintersection",
+    "description": "Tries to find intersections between a combination of arrays.",
+    "type": "library",
+    "require": {
+        "jelle-s/bitmaskgenerator": "^1.0"
+    },
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Jelle Sebreghts",
+            "email": "sebreghts.jelle@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+      "psr-4": {"Jelle_S\\Util\\Intersections": "src/"}
+    }
+}
