@@ -162,11 +162,9 @@ class ArrayIntersections {
    */
   protected function isNoResultMask($mask) {
     foreach ($this->noResultMasks as $noresultMask) {
-      // @codeCoverageIgnoreStart
       if ($mask === $noresultMask) {
-        return TRUE;
+        return TRUE; // @codeCoverageIgnore
       }
-      // @codeCoverageIgnoreEnd
       if (($mask & $noresultMask) === $noresultMask) {
         $this->noResultMasks[] = $mask;
         return TRUE;
