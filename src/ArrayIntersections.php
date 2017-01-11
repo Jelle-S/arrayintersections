@@ -118,6 +118,8 @@ class ArrayIntersections {
    * Set the maximum number of combinations to try for finding intersections.
    *
    * @param int $max
+   *
+   * @codeCoverageIgnore
    */
   public function setMaxNumberOfCombinations($max) {
     $this->maxNumberOfCombinations = $max;
@@ -160,9 +162,15 @@ class ArrayIntersections {
    */
   protected function isNoResultMask($mask) {
     foreach ($this->noResultMasks as $noresultMask) {
+      /**
+       * @codeCoverageIgnoreStart
+       */
       if ($mask === $noresultMask) {
         return TRUE;
       }
+      /**
+       * @codeCoverageIgnoreEnd
+       */
       if (($mask & $noresultMask) === $noresultMask) {
         $this->noResultMasks[] = $mask;
         return TRUE;
