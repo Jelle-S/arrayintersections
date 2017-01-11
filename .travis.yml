@@ -9,9 +9,9 @@ install:
   - composer self-update
   - composer install --dev
 script: vendor/bin/phpunit
-#addons:
-#    code_climate:
-#        repo_token: dc2745e561af99859933a2a93d0cf5c1af33cb206df9951e3e833191a6f1aae9
+addons:
+    code_climate:
+        repo_token: 3c0e12a373d68ffd090193faf37dbb4f8c3429936d4cab0e8c2cc68c31a412e7
 after_success:
   - vendor/bin/test-reporter
 sudo: false
