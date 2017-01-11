@@ -41,6 +41,21 @@ class IntersectionsTest extends TestCase {
     $this->assertEquals(count($largestFound), count($largest));
   }
 
+  /**
+   * Test getting intersections for just one array.
+   */
+  public function testOneArray() {
+    $arrays = [range(0, 10)];
+    // Array bigger than threshold.
+    $intersections = new ArrayIntersections($arrays, 3);
+    $this->assertEquals($arrays, $intersections->getAll());
+
+
+    // Array smaller than threshold.
+    $intersections = new ArrayIntersections($arrays, 15);
+    $this->assertEmpty($intersections->getAll());
+  }
+
   protected function hasValidThresholds($arrays, $threshold) {
     foreach ($arrays as $array) {
       if (count($array) < $threshold) {

@@ -73,7 +73,7 @@ class ArrayIntersections {
   public function __construct($arrays, $threshold, $maxNumberOfCombinations = 1000000) {
     $this->arrays = $arrays;
     $this->threshold = $threshold;
-    if (count($this->arrays) === 1 && count(reset($this->arrays) > $this->threshold)) {
+    if (count($this->arrays) === 1 && count(reset($this->arrays)) > $this->threshold) {
       $this->intersections = $this->arrays;
     }
     // Fitler the arrays. Those smaller than the threshold will not create an
