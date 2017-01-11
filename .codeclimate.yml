@@ -17,6 +17,8 @@ engines:
         enabled: false
       CleanCode/StaticAccess:
         enabled: false
+      Naming/LongVariable:
+        enabled: false
 ratings:
   paths:
   - "**.inc"

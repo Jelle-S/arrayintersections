@@ -135,10 +135,9 @@ class ArrayIntersections {
       if (!$this->isNoResultMask($mask)) {
         $i++;
         $this->generateIntersection($mask);
+        continue;
       }
-      else {
-        $noresult++;
-      }
+      $noresult++;
     }
 
     if (!is_null($this->intersections)) {
@@ -188,10 +187,9 @@ class ArrayIntersections {
     $intersection = call_user_func_array('array_intersect_assoc', $combination);
     if (count($intersection) >= $this->threshold) {
       $this->intersections[] = $intersection;
+      return;
     }
-    else {
-      $this->noResultMasks[] = $combinationMask;
-    }
+    $this->noResultMasks[] = $combinationMask;
   }
 
 }
