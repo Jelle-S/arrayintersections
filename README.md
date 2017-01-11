@@ -1,4 +1,7 @@
 # ArrayIntersections
+
+[![Build Status](https://travis-ci.org/Jelle-S/arrayintersections.svg?branch=develop)](https://travis-ci.org/Jelle-S/arrayintersections) [![Code Climate](https://codeclimate.com/github/Jelle-S/arrayintersections/badges/gpa.svg)](https://codeclimate.com/github/Jelle-S/arrayintersections) [![Test Coverage](https://codeclimate.com/github/Jelle-S/arrayintersections/badges/coverage.svg)](https://codeclimate.com/github/Jelle-S/arrayintersections/coverage) [![Issue Count](https://codeclimate.com/github/Jelle-S/arrayintersections/badges/issue_count.svg)](https://codeclimate.com/github/Jelle-S/arrayintersections)
+
 Tries to find intersections between a combination of arrays.
 
 ```php
