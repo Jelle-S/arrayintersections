@@ -1,12 +1,17 @@
 language: php
 php:
-    - "5.4"
-    - "5.3"
-    - "5.5"
     - "5.6"
     - "7.0"
+    - "7.1"
     - "nightly"
-    - hhvm
-script: phpunit .
+    - "hhvm"
+install:
+  - composer self-update
+  - composer install --dev
+script: vendor/bin/phpunit
+#addons:
+#    code_climate:
+#        repo_token: dc2745e561af99859933a2a93d0cf5c1af33cb206df9951e3e833191a6f1aae9
+after_success:
+  - vendor/bin/test-reporter
 sudo: false
-
